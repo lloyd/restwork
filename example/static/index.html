@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>restmail.net</title>
+  <script src="jquery.js"></script>
+  <style>
+    body {
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  type a word to be reversed:
+  <form>
+    <input id="toReverse" type="text"/>
+    <input type="submit"></input>
+  </form>
+</body>
+<script>
+  $(document).ready(function() {
+    $("form").on('submit', function(ev) {
+      alert("submitted: " + $("#toReverse").val());
+      ev.preventDefault();
+    });
+  });
+</script>
+</html>
