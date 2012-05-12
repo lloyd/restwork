@@ -2,12 +2,6 @@
 <html>
 <head>
   <title>restmail.net</title>
-  <script src="jquery.js"></script>
-  <style>
-    body {
-      font-size: 10px;
-    }
-  </style>
 </head>
 <body>
   type a word to be reversed:
@@ -15,12 +9,18 @@
     <input id="toReverse" type="text"/>
     <input type="submit"></input>
   </form>
+  <pre>
+  </pre>
 </body>
+<script src="jquery.js"></script>
 <script>
   $(document).ready(function() {
     $("form").on('submit', function(ev) {
-      alert("submitted: " + $("#toReverse").val());
       ev.preventDefault();
+      var word = $("#toReverse").val();
+      $.get('/api/reverse', { word: word }, function(data) {
+        $('pre').text(data);
+      });
     });
   });
 </script>
