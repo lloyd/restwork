@@ -1,0 +1,26 @@
+{
+  "author": "Lloyd Hilaiel <lloyd@hilaiel.com> (http://lloyd.io)",
+  "name": "restwork",
+  "description": "A frameWORK for building RESTful APIs in node.js servers",
+  "version": "0.0.1",
+  "homepage": "https://github.com/lloyd/connect-restwork",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lloyd/connect-restwork.git"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.6.10"
+  },
+  "dependencies": {
+    "connect": "1.x"
+  },
+  "devDependencies": {
+    "should": "0.6.0",
+    "mocha": "0.14.1",
+    "express": "2.x"
+  },
+  "scripts": {
+    "test": "mocha -R spec tests/*.js"
+  }
+}
